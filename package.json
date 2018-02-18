@@ -1,0 +1,44 @@
+{
+    "name": "imicros-gateway",
+    "version": "0.0.1",
+    "private": true,
+    "description": "imicros gateway - based on moleculer microservices framework",
+    "scripts": {
+        "dev": "moleculer-runner --repl --hot services",
+        "start": "moleculer-runner",
+        "test": "jest --no-cache"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/al66/imicros-gateway.git"
+    },
+    "keywords": [
+        "imicros",
+        "framework",
+        "gateway"
+    ],
+    "author": "Andreas Leinen <andreas.leinen@imicros.de>       (www.imicros.de)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/al66/imicros-gateway/issues"
+    },
+    "homepage": "https://github.com/al66/imicros-gateway#readme",
+    "devDependencies": {
+        "jest": "^21.2.1",
+        "moleculer-repl": "^0.3.0"
+    },
+    "dependencies": {
+        "bcrypt": "^1.0.3",
+        "config": "^1.25.1",
+        "debug": "~2.2.0",
+        "fs-extra": "^2.1.2",
+        "icon-webcomponent": "0.0.7",
+        "jsonwebtoken": "^8.1.1",
+        "moleculer": "^0.11.9",
+        "moleculer-db": "^0.7.0",
+        "moleculer-db-adapter-mongo": "^0.1.6",
+        "moleculer-mail": "^1.1.0",
+        "moleculer-web": "^0.6.1",
+        "redis": "^2.7.1"
+    }
+}
