@@ -183,6 +183,7 @@ const Service = {
     actions: {
         action: {
             handler(ctx) {
+                this.logger.info("service called", { meta: ctx.meta });
                 return {
                     action: "action",
                     params: ctx.params,
