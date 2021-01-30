@@ -1,7 +1,6 @@
 "use strict";
 
 const { ServiceBroker } = require("moleculer");
-const ApiGateway = require("moleculer-web");
 const { Gateway } = require("../index");
 const _ = require("lodash");
 const request = require("supertest");
@@ -13,7 +12,7 @@ const JWT_SECRET = "my_super_jwt_secret_for_users_service";
 
 const GatewayServcie = {
     name: "gateway",
-    mixins: [ApiGateway, Gateway],
+    mixins: [Gateway],
     version: 1,
     settings: {
         services: {
