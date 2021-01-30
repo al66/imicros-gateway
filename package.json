@@ -6,8 +6,8 @@
     "description": "Moleculer service for the imicros gateway",
     "main": "index.js",
     "scripts": {
-        "test": "jest --coverage --no-cache",
-        "test-local": "jest --coverage --no-cache --config=local.js"
+        "test": "jest --coverage --no-cache --silent",
+        "test-gateway": "jest --no-cache"
     },
     "jest": {
         "collectCoverageFrom": [
