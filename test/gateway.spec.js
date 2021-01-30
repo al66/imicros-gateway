@@ -1,6 +1,7 @@
 "use strict";
 
 const { ServiceBroker } = require("moleculer");
+const ApiGateway = require("moleculer-web");
 const { Gateway } = require("../index");
 const _ = require("lodash");
 const request = require("supertest");
@@ -10,8 +11,9 @@ const { Constants } = require("../lib/util/constants");
 
 const JWT_SECRET = "my_super_jwt_secret_for_users_service";
 
-const GatewaySettings = {
+const GatewayServcie = {
     name: "gateway",
+    mixins: [ApiGateway, Gateway],
     version: 1,
     settings: {
         services: {
@@ -239,7 +241,7 @@ describe("Test Gateway", () => {
                 logger: console,
                 logLevel: "info" //"debug"
             });
-            gatewayService = await broker.createService(Gateway,GatewaySettings);
+            gatewayService = await broker.createService(GatewayServcie);
             // load additonal services
             [Agents, Users, Service, Files].map(service => { return broker.createService(service); }); 
             await broker.start();
